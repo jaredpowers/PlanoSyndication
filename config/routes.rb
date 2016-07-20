@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :syndication do
-    get 'tour_urls'
-    get 'tour_slides_description'
-  end
+    get 'syndication/:name', to: 'syndication#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
