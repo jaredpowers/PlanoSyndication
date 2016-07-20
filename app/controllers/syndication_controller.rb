@@ -1,5 +1,7 @@
 class SyndicationController < ApplicationController
-  def index
-    @syndications = Syndication.find(params[:name])
+
+  def show
+    @syndications = Syndication.find_by name: 'tour_urls.txt'
   end
+
 end
